@@ -1,0 +1,31 @@
+.commissions{
+   padding: 40px 0;
+   text-align: center;
+} 
+.commissions .section-title h2{
+    margin-bottom:20px;
+    color:#1473e6;
+}
+.commission{
+    padding: 20px;
+    border: #f1f1f1 solid 0.5px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+.commission .img{
+    border-radius: 5px;
+}
+.commission .content{
+    padding: 10px;
+}
+.commission .content .title{
+    color: #1473e6;
+    text-align: right;
+}
+.commission .content p{
+    text-align: justify;
+    font-family: 'IRANSans_Light' !important;
+    font-size: 16px;
+    margin-top: 5px;
+}

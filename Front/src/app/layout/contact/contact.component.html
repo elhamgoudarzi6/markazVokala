@@ -1,0 +1,165 @@
+<app-header dir="rtl"></app-header>
+<p-toast position="center"></p-toast>
+<section class="breadcrumbs">
+  <div class="container-fluid">
+    <ol>
+      <li><a routerLink="/">صفحه اصلی</a></li>
+      <li>ارتباط با مرکز</li>
+    </ol>
+  </div>
+</section>
+<section id="contact" class="contact">
+  <div class="container">
+
+    <div class="section-title">
+      <p>
+        کاربر محترم شما می توانید با استفاده از راه های ارتباطی زیر با مرکز وکلا قوه قضاییه استان لرستان
+        در ارتباط باشید </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-lg-5">
+        <div class="info">
+          <div class="address">
+            <i class="fas fa-map-marker-alt"></i>
+            <h4>آدرس:</h4>
+            <p>
+              لرستان خرم آباد بالاتر از جهاد کشاورزی
+              خیابان رودکی ساختمان پارسه طبقه سوم
+            </p>
+          </div>
+
+          <div class="email">
+            <i class="fa fa-envelope"></i>
+            <h4>ایمیل:</h4>
+            <p>contact@markazvl.ir</p>
+          </div>
+
+          <div class="phone">
+            <i class="fas fa-phone"></i>
+            <h4>تلفن:</h4>
+            <p>06633242671</p>
+          </div>
+          <div class="fax">
+            <i class="fas fa-fax"></i>
+            <h4>فکس:</h4>
+            <p>06633242672</p>
+          </div>
+          <div class="time">
+            <i class="fas fa-clock"></i>
+            <h4>ساعات کاری:</h4>
+            <p>شنبه تا چهارشنبه 8-14</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-7 mt-5 mt-lg-0">
+
+        <form [formGroup]="contact" class="email-form" (ngSubmit)="onSubmit()">
+          <div class="form-row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" formControlName="fullName" class="form-control" id="name"
+                placeholder="نام و نام خانوادگی" data-msg="Please enter at least 4 chars" />
+              <ul class="mt-1 text-right list-inline" *ngFor="let error of errorMessages.fullName">
+                <li class="
+                          font-small
+                          text-danger
+                          font-title-bold
+                          list-inline-item
+                        " *ngIf="
+                          contact.get('fullName').hasError(error.type) &&
+                          (contact.get('fullName').dirty ||
+                            contact.get('fullName').touched)
+                        ">
+                  {{ error.message }}
+                </li>
+              </ul>
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="email" class="form-control" formControlName="email" name="email" id="email"
+                placeholder="ایمیل" data-rule="email" data-msg="Please enter a valid email" />
+
+              <ul class="mt-1 text-right list-inline" *ngFor="let error of errorMessages.email">
+                <li class="
+                          font-small
+                          text-danger
+                          font-title-bold
+                          list-inline-item
+                        " *ngIf="
+                          contact.get('email').hasError(error.type) &&
+                          (contact.get('email').dirty ||
+                            contact.get('email').touched)
+                        ">
+                  {{ error.message }}
+                </li>
+              </ul>
+
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="subject" formControlName="title" id="subject"
+              placeholder="عنوان" minlength="3" maxlength="20" data-msg="Please enter at least 8 chars of subject" />
+            <ul class="mt-1 text-right list-inline" *ngFor="let error of errorMessages.title">
+              <li class="
+                          font-small
+                          text-danger
+                          font-title-bold
+                          list-inline-item
+                        " *ngIf="
+                          contact.get('title').hasError(error.type) &&
+                          (contact.get('title').dirty ||
+                            contact.get('title').touched)
+                        ">
+                {{ error.message }}
+              </li>
+            </ul>
+            <div class="validate"></div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" formControlName="message" data-rule="required"
+              data-msg="Please write something for us" placeholder="پیام" minlength="20" maxlength="100"></textarea>
+            <ul class="mt-1 text-right list-inline" *ngFor="let error of errorMessages.message">
+              <li class="
+                          font-small
+                          text-danger
+                          font-title-bold
+                          list-inline-item
+                        " *ngIf="
+                          contact.get('message').hasError(error.type) &&
+                          (contact.get('message').dirty ||
+                            contact.get('message').touched)
+                        ">
+                {{ error.message }}
+              </li>
+            </ul>
+
+            <div class="validate"></div>
+          </div>
+          <div class="mb-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit" [disabled]="contact.invalid">ارسال پیغام</button></div>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="row justify-content-center">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1663.5245067442313!2d48.3649128!3d33.5001019!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3feec12e4267b953%3A0x995931edea95961!2z2YXYsdqp2LIg2KfZhdmI2LEg2YXYtNin2YjYsdin2YYg2K3ZgtmI2YLbjNiMINmI2qnZhNinINmIINqp2KfYsdi02YbYp9iz2KfZhiDZgtmI2Ycg2YLYttin24zbjNmHINin2LPYqtin2YYg2YTYsdiz2KrYp9mG!5e0!3m2!1sen!2s!4v1637662842171!5m2!1sen!2s"
+      width="600" height="450" style="border:0; width: 100%;height: 350px;margin-top: 20px;" allowfullscreen=""
+      loading="lazy"></iframe>
+  </div>
+</section>
+<app-footer dir="rtl"></app-footer>

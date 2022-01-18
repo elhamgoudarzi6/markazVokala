@@ -1,0 +1,201 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  direction: rtl;
+}
+.header_title {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+.header_title + .header_divider {
+  margin-right: 16px;
+}
+.header_divider {
+  flex-grow: 1;
+  height: 1px;
+  background: #ebebeb;
+}
+
+.recent-blog-posts .post-box .blogs-meta {
+  float: left;
+  color: #a8a7a7;
+  margin-top: 10px;
+}
+
+.recent-blog-posts .post-box .blogs-meta ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-blog-posts .post-box .blogs-meta ul li + li {
+  padding-right: 10px;
+}
+
+.recent-blog-posts .post-box .blogs-meta i {
+  font-size: 14px;
+  margin-left: 2px;
+  line-height: 0;
+}
+
+.recent-blog-posts .post-box .blogs-meta a {
+  font-family: 'IRANSans_Light' !important;
+  font-size: 11px;
+}
+
+.recent-blog-posts{
+  margin: 20px 0;
+  text-align: justify;
+
+}
+
+.recent-blog-posts .post-box {
+  // box-shadow: 5px 5px 10px rgba(55, 56, 59, 0.08);
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  transition: 0.3s;
+  height: 100%;
+  overflow: hidden;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.recent-blog-posts .post-box .post-img {
+  overflow: hidden;
+  margin: -30px -30px 15px;
+  position: relative;
+}
+
+.recent-blog-posts .post-box .post-img img {
+  transition: 0.5s;
+}
+.recent-blog-posts .post-box .brief{
+  font-size: 13px;
+  font-family: 'IRANSans_Light' !important;
+  color: #979696;
+
+
+}
+.recent-blog-posts .post-box .post-title {
+  font-size: 14px;
+  color: #1473e6;
+  font-weight: 400;
+  margin-bottom: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.recent-blog-posts .post-box .readmore {
+  margin-top: 4px;
+  line-height: 0;
+  padding: 10px 20px;
+   border-radius: 4px;
+  transition: 0.5s;
+  color:#1473e6;
+ // background: #fff;
+  border: 1px solid #1473e6 !important;
+
+}
+
+.recent-blog-posts .post-box .readmore span {
+  font-size: 14x;
+  letter-spacing: 1px;
+}
+
+.recent-blog-posts .post-box .readmore i {
+  margin-right: 8px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.recent-blog-posts .post-box .readmore:hover{
+  background:#1473e6;
+  color: #fff;
+}
+.recent-blog-posts .post-box .readmore:hover i {
+  transform: translateX(5px);
+  color: #fff;
+}
+
+.recent-blog-posts .post-box:hover .post-img img {
+  transform: scale(1.1);
+}
+
+
+
+.recent-blog-posts .sidebar {
+  padding: 25px;
+  margin: 0 ;
+//  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  background-color:#fff;
+}
+
+
+.recent-blog-posts .sidebar .sidebar-item {
+  margin-bottom: 30px;
+}
+
+
+
+.recent-blog-posts .sidebar .sidebar-item .post-item .meta{
+  float: right;
+  color: #a8a7a7;
+  margin-top: -15px;
+}
+
+
+.recent-blog-posts .sidebar .sidebar-item .post-item .meta i {
+  font-size: 14px;
+  margin-right: 30px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.recent-blog-posts .sidebar .sidebar-item .post-item .meta a {
+  font-family: 'IRANSans_Light' !important;
+  font-size: 12px;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+
+.recent-blog-posts .sidebar .recent-posts .post-item + .post-item {
+  margin-top: 20px;
+}
+
+.recent-blog-posts .sidebar .recent-posts img {
+  width: 100px;
+  float: right;
+  border-radius: 4px;
+}
+
+.recent-blog-posts .sidebar .recent-posts h4 {
+  font-size: 12px;
+  margin-right:110px;
+}
+.recent-blog-posts .sidebar .recent-posts h4 a {
+  color: #1473e6;
+  transition: 0.3s;
+}
+
+.recent-blog-posts .sidebar .recent-posts h4 a:hover {
+  color: #1473e6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

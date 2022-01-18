@@ -1,0 +1,158 @@
+<div id="topbar" class="d-none d-lg-flex align-items-center">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center">
+      <div class="info">
+        <a class="whatsapp" href="#">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a class="twitter" href="#"> <i class="fab fa-twitter"></i> </a>
+        <a class="facebook" href="http://www.facebook.com/markazvl">
+          <i class="fab fa-facebook-f white-text"></i>
+        </a>
+        <a class="linkedin" href="http://www.linkedin.com/in/markazvl">
+          <i class="fab fa-linkedin-in white-text"></i>
+        </a>
+        <a class="instagram" href="http://instagram.com/markazvl">
+          <i class="fab fa-instagram white-text"></i>
+        </a>
+      </div>
+    </div>
+    <div class="info mr-auto">
+      <div class="info mr-auto">
+        <i class="far fa-question-circle"></i>
+        <a href="">راهنما</a>
+        <i class="fa fa-headset"></i>
+        <a href="">پشتیبانی</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="pc-fixed" class="pc-header">
+  <div class="row justify-content-center h-100">
+    <div class="col-3 d-flex mr-4 align-self-center">
+      <div class="row">
+        <a class="logo" [routerLink]="['/']">
+          <img width="65px" src="../../../assets/images/logo.png" class="img-fluid logo" alt="" />
+        </a>
+        <h1 style="font-size:12px;color: #4154f1;margin: 20px 5px 0;">مرکز وکلا قوه قضاییه استان لرستان</h1>
+      </div>
+    </div>
+    <div class="col align-self-center">
+      <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container justify-content-center">
+          <div class="expand navbar-expand" id="mobile_nav">
+            <ul class="navbar-nav navbar-light">
+              <li class="nav-item"><a class="nav-link" [routerLink]="['/']">صفحه اصلی</a></li>
+              <li class="nav-item"><a class="nav-link" [routerLink]="['/team']">اعضا هیات مدیره</a></li>
+              <li class="nav-item"> <a class="nav-link" [routerLink]="['/staff']">کارکنان</a></li>
+              <li class="nav-item"><a class="nav-link" [routerLink]="['/faq']">سوالات متداول</a></li>
+              <li class="nav-item"><a class="nav-link" [routerLink]="['/news']">اخبار</a></li>
+              <li class="nav-item dropdown megamenu-li dmenu">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">سامانه ها</a>
+                <div class=" align-self-center  dropdown-menu megamenu sm-menu" style="
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),0 6px 6px rgba(0, 0, 0, 0.23);">
+                  <div class="row">
+                    <div class="col-6">
+                      <ul class="list-group list-group-flush text-right small">
+
+                        <li class="list-group-item">
+                          <a class="nav-link"
+                            href="https://my.23055.ir/web/members/login?p_p_id=58&p_p_lifecycle=0&_58_redirect=%2Frenewal">
+                            <i class="pi pi-id-card pl-4"></i> تمدید پروانه</a>
+                        </li>
+                        <li class="list-group-item">
+                          <a class="nav-link" href="http://automation.23055.ir:1000/Account/Login?ReturnUrl=%2f">
+                            <i class="pi pi-desktop pl-4"></i> اتوماسیون اداری</a>
+                        </li>
+                        <li class="list-group-item">
+                          <a class="nav-link" href="https://lms.23055.ir/">
+                            <i class="pi pi-file-pdf pl-4"></i> سامانه آموزش</a>
+                        </li>
+                        <li class="list-group-item">
+                          <a class="nav-link" href="http://karamoozi.23055.ir/">
+                            <i class="pi pi-users pl-4"></i> کارآموزی</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-6">
+                      <ul class="list-group list-group-flush text-right small">
+                        <li class="list-group-item">
+                          <a class="nav-link" href="http://77.237.94.52:880/jamea/parvandelogin.aspx">
+                            <i class="pi pi-search pl-4"></i> پیگیری پرونده</a>
+                        </li>
+                        <li class="list-group-item">
+                          <a class="nav-link" href="https://jazb.23055.ir/auth/login"><i
+                              class="pi pi-check-square pl-4"></i> انتخابات 1400</a>
+                        </li>
+                        <li class="list-group-item">
+                          <a class="nav-link" href="https://jazb.23055.ir/auth/login">
+                            <i class="pi pi-file pl-4"></i> سامانه جذب</a>
+                        </li>
+                        <li class="list-group-item">
+                          <a class="nav-link" href="https://www.23055.ir/courses"><i class="pi pi-book pl-4"></i> امور
+                            هیات علمی</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" [routerLink]="['/gallery']">گالری</a></li>
+              <li class="nav-item"><a class="nav-link" [routerLink]="['/about']">درباره ما</a></li>
+              <li class="nav-item"><a class="nav-link" [routerLink]="['/contact']">تماس با ما</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="col-2 d-flex flex-row-reverse align-self-center">
+      <a href="https://www.23055.ir/login"
+        class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+        <span>ورود به پرتال</span>
+        <i class="pi pi-sign-in mr-2"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="mobile-header">
+  <div class="row justify-content-center h-100">
+    <div class="col-3 d-flex align-self-center ">
+      <button (click)="displayMobileMenu = true" type="button" class="mobile-bar">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+    <div class="col text-center justify-content-center">
+      <a [routerLink]="['/']" class="text-center">
+        <img src="../../../assets/images/logo.png" class="img-fluid mobile-logo " alt="" />
+      </a>
+      <h1>مرکز وکلا قوه قضاییه استان لرستان</h1>
+    </div>
+    <div class="col-4 d-flex flex-row-reverse align-self-center">
+      <a href="https://www.23055.ir/login"
+        class="btn-mobile d-inline-flex align-items-center justify-content-center align-self-center">
+        <span>ورود به پرتال</span>
+        <i class="pi pi-sign-in"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<p-sidebar [transitionOptions]="'400ms cubic-bezier(0.86, 0, 0.07, 1)'" [(visible)]="displayMobileMenu" position="right"
+  [showCloseIcon]="true" [baseZIndex]="10000">
+  <div class="text-center">
+    <img width="100px" src="../../../assets/images/logo.png" class="img-fluid mb-1" alt="" />
+  </div>
+  <div class="d-flex flex-column">
+    <div class="mb-auto">
+      <p-panelMenu [model]="items" [style]="{ width: '100%' }"></p-panelMenu>
+    </div>
+  </div>
+</p-sidebar>

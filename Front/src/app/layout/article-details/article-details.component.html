@@ -1,0 +1,64 @@
+
+<app-header dir="rtl"></app-header>
+<section class="breadcrumbs">
+  <div class="container">
+    <ol>
+      <li><a routerLink="/">صفحه اصلی</a></li>
+      <li><a [routerLink]="['/articles']">مقالات</a></li>
+      <li>{{Article['title']}}</li>
+    </ol>
+  </div>
+</section>
+
+<section id="blog" class="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="sidebar">
+          <h3 class="sidebar-title">جستجوی مقاله</h3>
+          <div class="sidebar-item search-form">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="جستجوی مقاله" aria-label="Username"
+                aria-describedby="basic-addon1">
+              <div class="input-group-prepend">
+                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="sidebar-title">جدیدترین مقالات</h3>
+          <div class="sidebar-item recent-posts">
+            <div class="post-item clearfix" *ngFor="let i of latestArticle">
+              <img [src]="i['image']" [alt]="i['imageDescription']">
+              <h4><a [routerLink]="['/news-detail',i['_id']]">{{i['title']}}</a></h4>
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="pi pi-user"></i><a>{{i['author']}}</a></li>
+                  <li class="d-flex align-items-center"><i class="far fa-clock"></i><a><time>{{i['date']}}</time></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-lg-8 entries">
+        <article class="entry entry-single">
+          <div class="entry-img">
+            <img [src]="Article['image']" [alt]="Article['imageDescription']" class="entry-img">
+          </div>
+          <h2 class="entry-title"><a>{{Article['title']}}</a></h2>
+          <div class="entry-meta">
+            <ul>
+              <li class="d-flex align-items-center"><i class="pi pi-user"></i><a>{{Article['author']}}</a></li>
+              <li class="d-flex align-items-center"><i class="far fa-clock"></i><a><time datetime="1400-2-24">{{Article['date']}}</time></a></li>
+            </ul>
+          </div>
+          <div class="entry-content">
+            <p>{{Article['details']}}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section><!-- End Blog Section -->
+<app-footer dir="rtl"></app-footer>

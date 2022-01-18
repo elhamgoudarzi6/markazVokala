@@ -1,0 +1,109 @@
+<p-toast position="center"></p-toast>
+<p-confirmDialog
+  [style]="{ width: '50vw' }"
+  [baseZIndex]="10000"
+></p-confirmDialog>
+<div style="direction: rtl; text-align: right">
+  <div class="card">
+    <form class="w-100 mt-3">
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-field p-col">
+          <label for="title">عنوان</label>
+          <input
+            readonly="readonly"
+            name="title"
+            type="text"
+            pInputText
+            [(ngModel)]="article.title"
+          />
+        </div>
+        <div class="p-field p-col">
+          <label for="date">تاریخ</label>
+          <input
+            readonly="readonly"
+            name="date"
+            type="text"
+            pInputText
+            [(ngModel)]="article.date"
+          />
+        </div>
+      </div>
+
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-field p-col text-right">
+          <label class="d-block"> خلاصه خبر</label>
+          <textarea
+            readonly="readonly"
+            class="form-control"
+            [(ngModel)]="article.author"
+            name="author"
+            rows="3"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-field p-col text-right">
+          <label class="d-block">جزئیات خبر</label>
+          <p-editor
+            appendTo="body"
+            readonly="readonly"
+            name="details"
+            [(ngModel)]="article.details"
+            [style]="{ height: '150px' }"
+          >
+          </p-editor>
+        </div>
+      </div>
+
+
+
+
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-field p-col text-right">
+          <label class="d-block">تصویر خبر</label>
+          <img
+            [src]="article.image"
+            class="img-fluid"
+            [alt]="article.imageDescription"
+          />
+        </div>
+      </div>
+
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-field p-col">
+          <label class="d-block">توضیحات تصویر (سئو)</label>
+          <textarea
+            readonly="readonly"
+            class="form-control"
+            [(ngModel)]="article.imageDescription"
+            name="imageDescription"
+            rows="3"
+          ></textarea>
+        </div>
+      </div>
+
+
+      <span class="float-left p-buttonset">
+        <button
+          pButton
+          type="button"
+          label="حذف"
+          (click)="deleteBlog(article._id)"
+          class="p-button-danger"
+          icon="pi pi-trash"
+          iconPos="left"
+        ></button>
+        <button
+          pButton
+          type="button"
+          (click)="return()"
+          label="انصراف"
+          class="p-button-info"
+          icon="pi pi-home"
+          iconPos="left"
+        ></button>
+      </span>
+    </form>
+  </div>
+</div>

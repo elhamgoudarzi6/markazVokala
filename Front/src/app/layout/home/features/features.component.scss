@@ -1,0 +1,91 @@
+
+.services{
+  text-align: right;
+background-color: #fff;
+}
+
+.services .service-box {
+  border: #ececec solid 1px;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+
+  height: 100%;
+  padding: 20px 30px 0;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.services .service-box .icon {
+  font-size: 36px;
+  padding: 40px 20px;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 25px;
+  display: inline-block;
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.services .service-box h3 {
+  color: #444444;
+  font-weight: 700;
+}
+.services .service-box p {
+  text-align: justify;
+  font-family: 'IRANSans_Light' !important;
+}
+.services .service-box .read-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 6px 20px;
+  border: 0.1px solid #1473e6;
+  border-radius: 5px;
+}
+.services .service-box .read-more span{
+  color: #1473e6;
+}
+.services .service-box:hover .read-more{
+  background: #fff;
+  border: 0.5px solid #fff;
+  color: #1473e6;
+}
+.services .service-box:hover .read-more span{
+  color: #1473e6;
+}
+.services .service-box .read-more i {
+  line-height: 0;
+  margin-right: 9px;
+  font-size: 14px;
+}
+.services .service-box:hover .icon-arrow{
+  transform: translateX(5px);
+  color: #1473e6;
+}
+.services .service-box {
+  border-bottom: 3px solid #1473e6;
+}
+
+.services .service-box .icon {
+  color: #fff;
+  background: #1473e6;
+  padding: 35px 20px;
+}
+
+.services .service-box:hover {
+  background: #1473e6;
+  box-shadow: 0px 5px 10px rgba(1, 41, 112, 0.08);
+
+}
+
+.services .service-box:hover h3, .services .service-box:hover p, .services .service-box:hover .read-more {
+  color: #fff;
+}
+
+.services .service-box:hover .icon {
+  background: #fff;
+  color: #1473e6;
+}

@@ -1,0 +1,55 @@
+<app-header dir="rtl"></app-header>
+<section class="breadcrumbs">
+  <div class="container-fluid">
+    <ol>
+      <li><a routerLink="/">صفحه اصلی</a></li>
+      <li>گالری</li>
+    </ol>
+  </div>
+</section>
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <div class="header">
+      <h2 class="header_title">گالری تصاویر</h2>
+      <div class="header_divider"></div>
+    </div>
+    <div class="row portfolio-container">
+      <div class="col-lg-3 col-md-6 portfolio-item" *ngFor="let i of sliders">
+        <div class="portfolio-wrap">
+          <img [src]="i['imageurl']" class="img-fluid" [alt]="i['imageDescription']">
+          <div class="portfolio-info">
+            <a [routerLink]="['/gallery-detail',i['_id']]">
+              <h4>{{i.Category[0].title}}</h4>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="blog" class="blog">
+  <div class="container">
+    <div class="header">
+      <h2 class="header_title">گالری ویدیو</h2>
+      <div class="header_divider"></div>
+    </div>
+    <div class="row">
+      <div class="card col-lg-4" *ngFor="let i of videos">
+        <img [src]="i['image']" class="card-img">
+        <a [href]="i['videoUrl']" class="play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+        <div class="card-body">
+          <div class="entry-meta">
+            <ul>
+              <li class="d-flex align-items-center"><i class="far fa-clock"></i><a><time
+                    datetime="1400-2-24">{{i['date']}}</time></a></li>
+            </ul>
+          </div>
+          <h5 class="card-title"><a href="">{{i['title']}} </a></h5>
+          <p class="card-text">{{i['brief']}} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer dir="rtl"></app-footer>

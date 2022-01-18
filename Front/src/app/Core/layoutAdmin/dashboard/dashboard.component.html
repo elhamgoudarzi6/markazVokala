@@ -1,0 +1,108 @@
+<mat-sidenav-container class="sidenav-container" dir="rtl">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar class="title-sidebar text-center">
+      <div class="row w-100">
+        <div class="col-12">
+          <img *ngIf="adminImage != ''" [src]="adminImage" class="d-block img-fluid mt-3 mx-a mx-auto rounded-circle"
+            width="60px" />
+          <img *ngIf="adminImage == ''" src="../../../../assets/images/admin-default.png"
+            class="d-block img-fluid mb-2 mx-a mx-auto rounded-circle" width="60px" />
+        </div>
+      </div>
+    </mat-toolbar>
+    <!-- <hr style="margin-top: -10px" /> -->
+    <mat-nav-list>
+      <mat-list>
+        <mat-list-item [routerLink]="['/admin/blog']">
+          <i class="pi pi-home pl-2 text-white" style="font-size: 1rem"></i>
+          پیشخوان
+        </mat-list-item>
+        <mat-divider *ngIf="userType == 'admin'"></mat-divider>
+        <mat-list-item [routerLink]="['/admin/notification']">
+          <i class="pi pi-bell pl-2 text-white" style="font-size: 1rem"></i>
+           اطلاعیه کارآموزان
+        </mat-list-item>
+        <mat-divider *ngIf="userType == 'admin'"></mat-divider>
+        <mat-list-item [routerLink]="['/admin/employee']">
+          <i class="pi pi-book pl-2 text-white" style="font-size: 1rem"></i>
+          مدیریت پرسنل
+        </mat-list-item>
+        <mat-divider *ngIf="userType == 'admin'"></mat-divider>
+        <mat-list-item [routerLink]="['/admin/moazedats']">
+          <i class="pi pi-book pl-2 text-white" style="font-size: 1rem"></i>
+          مدیریت معاضدت
+        </mat-list-item>
+        <mat-divider *ngIf="userType == 'admin'"></mat-divider>
+        <mat-list-item [routerLink]="['/admin/commissions']">
+          <i class="pi pi-id-card pl-2 text-white" style="font-size: 1rem"></i>
+          مدیریت کمیسیون
+        </mat-list-item>
+        <mat-divider *ngIf="userType == 'admin'"></mat-divider>
+        <mat-list-item [routerLink]="['/admin/article']">
+          <i class="pi pi-file-pdf pl-2 text-white" style="font-size: 1rem"></i>
+          مدیریت مقاله ها
+        </mat-list-item>
+        <mat-divider *ngIf="userType == 'admin'"></mat-divider>
+        <mat-list-item [routerLink]="['/admin/occasion']">
+          <i class="pi pi-bell pl-2 text-white" style="font-size: 1rem"></i>
+          مدیریت مناسبت ها
+        </mat-list-item>
+        <mat-divider *ngIf="userType == 'admin'"></mat-divider>
+        <mat-list-item [routerLink]="['/admin/slider']">
+          <i class="pi pi-images pl-2 text-white" style="font-size: 1rem"></i>
+          مدیریت گالری تصاویر
+        </mat-list-item>
+        <mat-divider *ngIf="userType == 'admin'"></mat-divider>
+        <mat-list-item [routerLink]="['/admin/video']">
+          <i class="pi pi-video pl-2 text-white" style="font-size: 1rem"></i>
+مدیریت  گالری ویدیو
+        </mat-list-item>
+        <mat-divider *ngIf="userType == 'admin'"></mat-divider>
+        <mat-list-item [routerLink]="['/admin/subscription']">
+          <i class="pi pi-users pl-2 text-white" style="font-size: 1rem"></i>
+          مدیریت اعضا خبرنامه
+        </mat-list-item>
+        <mat-divider *ngIf="userType == 'admin'"></mat-divider>
+        <mat-list-item [routerLink]="['/admin/faq']">
+          <i class="pi pi-question-circle pl-2 text-white" style="font-size: 1rem"></i>
+          سوالات متداول
+        </mat-list-item>
+        <mat-divider *ngIf="userType == 'admin'"></mat-divider>
+        <mat-list-item [routerLink]="['/admin/contact']">
+          <i class="pi pi-comments pl-2 text-white" style="font-size: 1rem"></i>
+           پیام های فرم تماس با ما
+        </mat-list-item>
+        <mat-divider *ngIf="userType == 'admin'"></mat-divider>
+        <mat-list-item [routerLink]="['/admin/admin']" *ngIf="userType == 'admin'">
+          <i class="pi pi-users pl-2 text-white" style="font-size: 1rem"></i>مدیریت ادمین ها
+        </mat-list-item>
+        <mat-divider *ngIf="userType == 'admin'"></mat-divider>
+        <mat-list-item [routerLink]="['/admin/profile']">
+          <i class="pi pi-user-edit pl-2 text-white" style="font-size: 1rem"></i>پروفایل کاربری
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item (click)="logOut()">
+          <i class="pi pi-sign-out pl-2 text-white" style="font-size: 1rem"></i>
+          خروج
+        </mat-list-item>
+      </mat-list>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <p-toolbar>
+      <div class="row">
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+            <div class="pi pi-bars"></div>
+          </button>
+          <span class="mx-3 text-white text-center" style="font-family:IRANSans_Light;">{{ adminName }}</span>
+          <span class="mx-3 text-white text-center" style="font-family:IRANSans_Light;">{{ date }}</span>
+          <span class="mx-3 text-white text-center" style="font-family:IRANSans_Light;">{{ time }}</span>
+          <span class="mx-3 text-white text-center" style="font-family:IRANSans_Light;" (click)="logOut()"><i class="pi pi-power-off text-white pl-1"></i>خروج</span>
+      </div>
+    </p-toolbar>
+    <ng-content> </ng-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

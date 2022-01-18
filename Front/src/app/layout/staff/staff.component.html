@@ -1,0 +1,34 @@
+<app-header dir="rtl"></app-header>
+<section class="breadcrumbs">
+  <div class="container">
+    <ol>
+      <li><a routerLink="/">صفحه اصلی</a></li>
+      <li>کارکنان مرکز</li>
+    </ol>
+  </div>
+</section>
+<section id="team" class="team">
+  <div class="container">
+    <div class="row ml-5 mr-5">
+      <div class="col-lg-4 col-md-6 mt-5 mb-5 mt-lg-0" *ngFor="let i of AllEmployee">
+        <div class="member" >
+          <div class="pic"><img [src]="i['image']"  class="img-fluid"></div>
+          <div class="member-info">
+            <h4>{{i['fullName']}}</h4>
+            <span>{{i['role']}}</span>
+            <div class="social">
+              <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fab fa-lg fa-facebook-f"></i></a>
+              <a href="#" class="instagram"><i class="fab fa-lg fa-instagram"></i></a>
+              <a href="#" class="whatsapp"><i class="fab fa-lg fa-whatsapp"></i></a>
+              <a href="#" class="linkedin"><i class="fab fa-lg fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>  
+
+  </div>
+</section>
+<app-footer dir="rtl"></app-footer>

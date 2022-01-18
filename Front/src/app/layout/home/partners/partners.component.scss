@@ -1,0 +1,125 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  direction: rtl;
+}
+.header_title {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-family: IRANSans_Bold;
+}
+.header_title + .header_divider {
+  margin-right: 16px;
+}
+.header_divider {
+  flex-grow: 1;
+  height: 1px;
+  background: #ebebeb;
+}
+
+
+
+.services{
+  text-align: center;
+  padding:40px 0 ;
+}
+
+.services .icon img{
+  width:100px;
+}
+.services .icon-box {
+  padding: 20px 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: #ececec solid 1px;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.services .icon-box .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.services .icon-box .title a {
+  color: #1473e6;
+  transition: 0.3s;
+}
+
+.services .icon-box .description {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 0;
+  text-align: justify;
+  font-family: 'IRANSans_Light' !important;
+}
+
+.services .icon-box .icon {
+  margin-bottom: 20px;
+  padding-top: 10px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  font-size: 36px;
+  line-height: 1;
+  color: #1473e6;
+}
+
+.services .icon-box:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 0 10px rgba(1, 41, 112, 0.08);
+}
+
+.services .icon-box:hover .title a {
+  color: #1473e6;
+}
+
+
+
+
+.features{
+  text-align: right;
+}
+
+.features .icon-box {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f6f9ff;
+  transition: ease-in-out 0.3s;
+  border-radius: 5px;
+}
+
+.features .icon-box i {
+  font-size: 18px;
+  padding-left: 10px;
+ line-height: 1;
+  color: #1473e6;
+  transition: 0.3s;
+}
+.features .icon-box:hover i {
+  transform: translateX(5px);
+}
+.features .icon-box h3 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.features .icon-box h3 a {
+  color: #1473e6;
+  transition: ease-in-out 0.3s;
+  font-family: 'IRANSans_Light' !important;
+}
+.features .icon-box h3 a:hover {
+  color: #1473e6;
+}
+.features .icon-box:hover {
+  box-shadow: 0 5px 5px rgba(18, 66, 101, 0.08);
+}

@@ -1,0 +1,60 @@
+<p-toast position="center"></p-toast>
+<p-confirmDialog [style]="{ width: '50vw' }" [baseZIndex]="10000"></p-confirmDialog>
+<div class="pnl-content p-3">
+  <div class="box text-right" dir="rtl" id="printSectionId" #epltable dir="rtl">
+    <p-table #dt [value]="smsList" dataKey="id" [rows]="5" [showCurrentPageReport]="true"
+      [rowsPerPageOptions]="[10, 25, 50]" [paginator]="true"
+      currentPageReportTemplate="نمایش {first} تا {last} از {totalRecords} صفحه" [filterDelay]="0"
+      [globalFilterFields]="['mobile']">
+      <ng-template pTemplate="caption">
+        <div class="table-header row">
+          <div class="col-sm-6">لیست اعضای پیامک </div>
+          <div class="col-sm-6 text-left">
+            <button pButton pRipple label="خروجی اکسل" icon="pi pi-file"
+              class="p-button-success p-mr-2 p-button-icon-right" (click)="exportToExcel()"></button>
+            <button pButton type="button" class="p-button-success p-mr-2 p-button-icon-right" [useExistingCss]="true"
+              label="چاپ" printSectionId="printSectionId" ngxPrint icon="pi pi-print" ></button>
+          </div>
+          <div class="col-sm-12">
+            <span class="p-input-icon-left w-100 mt-3">
+              <i class="pi pi-search"></i>
+              <input pInputText type="text" class="w-100" (input)="dt.filterGlobal($event.target.value, 'contains')"
+                placeholder="جستجو کلی" />
+            </span>
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="width: 45px">ردیف</th>
+          <th pSortableColumn="mobile">
+            موبایل
+            <p-sortIcon field="mobile"></p-sortIcon>
+          </th>
+          <th>عملیات</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowIndex="rowIndex" let-sms let-expanded="expanded">
+        <tr>
+          <td>
+            {{ rowIndex + 1 }}
+          </td>
+          <td id="printSectionId" #epltable>
+            {{ sms.mobile }}
+          </td>
+          <td>
+            <button pButton pRipple icon="pi pi-trash" (click)="deleteSms(sms._id)"
+              class="p-button-outlined p-button-danger"></button>
+          </td>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="3">هیچ رکوردی یافت نشد.</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<app-header dir="rtl"></app-header>
+<section class="breadcrumbs">
+  <div class="container">
+    <ol>
+      <li><a routerLink="/">صفحه اصلی</a></li>
+      <li><a routerLink="/gallery">گالری</a></li>
+      <li>{{gallery['Category'][0].title}}</li>
+    </ol>
+  </div>
+</section>
+<section id="gallery" class="gallery">
+  <div class="container-fluid">
+    <div class="row no-gutters">
+      <div class="col-lg-3 col-md-4" *ngFor="let i of gallery['gallery']; 
+       let j = index" >
+        <div class="gallery-item">
+          <a class="venobox" [href]="gallery['gallery'][j]">
+            <img [src]="gallery['gallery'][j]" class="img-fluid">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer dir="rtl"></app-footer>

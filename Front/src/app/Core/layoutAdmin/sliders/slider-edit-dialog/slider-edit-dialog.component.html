@@ -1,0 +1,83 @@
+<p-toast position="center"></p-toast>
+<div style="direction: rtl; text-align: right">
+  <form [formGroup]="form" (ngSubmit)="submitForm()" class="w-100 mt-3">
+    <div class="p-fluid p-formgrid p-grid">
+      <div class="p-field p-col">
+        <label class="d-block">دسته بندی </label>
+        <p-dropdown appendTo="body" emptyFilterMessage="نتیجه ای یافت نشد" [options]="categories" optionLabel="title"
+          (onChange)="onCategory($event)" [filter]="true" filterBy="title">
+        </p-dropdown>
+      </div>
+
+      <div class="p-field p-col">
+        <label class="d-block">توضیحات تصویر (سئو)</label>
+        <textarea class="form-control" formControlName="imageDescription" id="imageDescription" rows="2"></textarea>
+        <ul class="mt-1 text-right list-inline" *ngFor="let error of errorMessages.imageDescription">
+          <li class="font-small text-danger font-weight-bold list-inline-item" *ngIf="form.get('imageDescription').hasError(error.type)
+                        && (form.get('imageDescription').dirty
+                        || form.get('imageDescription').touched)">
+            {{ error.message }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid">
+
+      <div class="p-field p-col text-right">
+        <label class="d-block">تصویر فعلی</label>
+        <img [src]="slider.imageurl" class="img-fluid" alt="slider.imageDescription" />
+      </div>
+      <div class="p-field p-col text-right">
+        <label class="d-block">آپلود تصویر </label>
+        <p-fileUpload chooseLabel="انتخاب تصویر" uploadLabel="آپلود تصویر" cancelLabel="انصراف" customUpload="true"
+          (uploadHandler)="imageUploader($event)" invalidFileSizeMessageDetail="حداکثر سایز فایل 2 مگابایت می باشد"
+          invalidFileSizeMessageSummary="اندازه فایل بیش از حد مجاز می باشد" accept="image/jpeg,image/png"
+          maxFileSize="2000000">
+        </p-fileUpload>
+        <ul class="mt-1 text-right list-inline" *ngFor="let error of errorMessages.imageurl">
+          <li class="font-small text-danger font-weight-bold list-inline-item" *ngIf="
+              form.get('imageurl').hasError(error.type) &&
+              (form.get('imageurl').dirty || form.get('imageurl').touched)
+            ">
+            {{ error.message }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid">
+      <div class="p-field p-col text-right">
+        <label>تصاویر گالری </label>
+        <p-galleria [value]="slider.gallery">
+          <ng-template pTemplate="item" let-item>
+              <img [src]="item" [alt]="slider.imageDescription"  class="img-fluid" />
+          </ng-template>
+      </p-galleria>
+      </div>
+      <div class="p-field p-col text-right">
+        <label>آپلود تصاویر گالری </label>
+        <p-fileUpload
+        chooseLabel="انتخاب تصویر"
+        uploadLabel="آپلود تصویر"
+        cancelLabel="انصراف"
+        customUpload="true"
+        multiple="multiple"
+        (uploadHandler)="onMultipleUpload($event)"
+        invalidFileSizeMessageDetail="حداکثر سایز فایل 2 مگابایت می باشد"
+        invalidFileSizeMessageSummary="اندازه فایل بیش از حد مجاز می باشد"
+        accept="image/jpeg,image/png"
+        maxFileSize="2000000"
+      >
+      </p-fileUpload>
+      </div>
+    </div>
+
+    <div class="p-fluid p-formgrid p-grid">
+      <div class="p-field p-col">
+        <div class="float-left">
+          <button pButton type="submit" label="ثبت" class="ui-button-success" icon="pi pi-check" iconPos="left"
+            [disabled]="form.invalid"></button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

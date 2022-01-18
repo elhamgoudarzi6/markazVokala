@@ -1,0 +1,144 @@
+<!-- <p-toast [style]="{marginTop: '80px'}"></p-toast> -->
+<app-header dir="rtl"></app-header>
+<section class="breadcrumbs">
+  <div class="container">
+    <ol>
+      <li><a routerLink="/">صفحه اصلی</a></li>
+      <li>اعضا هیات مدیره</li>
+    </ol>
+  </div>
+</section>
+<!-- <section id="team" class="team">
+  <div class="container"> -->
+
+
+<!-- <p-organizationChart [value]="data" selectionMode="single" [(selection)]="selectedNode"
+      (onNodeSelect)="onNodeSelect($event)" styleClass="company">
+      <ng-template let-node pTemplate="person">
+        <div class="node-header p-corner-top">{{node.label}}</div>
+        <div class="node-content">
+          <div>{{node.data.name}}</div>
+        </div>
+      </ng-template>
+      <ng-template let-node pTemplate="department">
+        {{node.label}}
+      </ng-template>
+    </p-organizationChart> -->
+
+
+<!-- <div class="row align-items-center">
+      <div class="col-lg-4 col-md-6 mt-5 mb-5 mt-lg-0">
+      </div>
+      <div class="col-lg-3 col-md-6 mt-5 mb-5 mt-lg-0" *ngFor="let i of members">
+        <div class="member" *ngIf="i['level']===1">
+          <div class="pic"><img [src]="i['image']" class="img-fluid" alt=""></div>
+          <div class="member-info">
+            <h4>{{i['fullName']}}</h4>
+            <span>{{i['role']}}</span>
+            <div class="social">
+              <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fab fa-lg fa-facebook-f"></i></a>
+              <a href="#" class="instagram"><i class="fab fa-lg fa-instagram"></i></a>
+              <a href="#" class="whatsapp"><i class="fab fa-lg fa-whatsapp"></i></a>
+              <a href="#" class="linkedin"><i class="fab fa-lg fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-5 mb-5 mt-lg-0">
+      </div>
+    </div>
+
+
+    
+
+
+  </div>
+
+
+</section> -->
+
+
+
+<section id="members" class="members section-bg">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" *ngFor="let i of row1">
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" *ngFor="let i of row1">
+        <div class="member-box member-box-blue">
+          <div class="member-img"><img [src]="i['image']" class="img-fluid" alt=""></div>
+          <h4 class="member-name">{{i['fullName']}}</h4>
+          <h6 class="member-role">{{i['role']}}</h6>
+          <div class="social">
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fab fa-lg fa-facebook-f"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-lg fa-instagram"></i></a>
+            <a href="#" class="whatsapp"><i class="fab fa-lg fa-whatsapp"></i></a>
+            <a href="#" class="linkedin"><i class="fab fa-lg fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" *ngFor="let i of row1">
+      </div>
+    </div>
+    <div class="row">
+      
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" *ngFor="let i of row2">
+        <div class="member-box member-box-blue">
+          <div class="member-img"><img [src]="i['image']" class="img-fluid" alt=""></div>
+          <h4 class="member-name">{{i['fullName']}}</h4>
+          <h6 class="member-role">{{i['role']}}</h6>
+          <div class="social">
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fab fa-lg fa-facebook-f"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-lg fa-instagram"></i></a>
+            <a href="#" class="whatsapp"><i class="fab fa-lg fa-whatsapp"></i></a>
+            <a href="#" class="linkedin"><i class="fab fa-lg fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" *ngFor="let i of row1">
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" *ngFor="let i of row3">
+        <div class="member-box member-box-blue">
+          <div class="member-img"><img [src]="i['image']" class="img-fluid" alt=""></div>
+          <h4 class="member-name">{{i['fullName']}}</h4>
+          <h6 class="member-role">{{i['role']}}</h6>
+          <div class="social">
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fab fa-lg fa-facebook-f"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-lg fa-instagram"></i></a>
+            <a href="#" class="whatsapp"><i class="fab fa-lg fa-whatsapp"></i></a>
+            <a href="#" class="linkedin"><i class="fab fa-lg fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" *ngFor="let i of row1">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" *ngFor="let i of row1">
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" *ngFor="let i of row4">
+        <div class="member-box member-box-blue">
+          <div class="member-img"><img [src]="i['image']" class="img-fluid" alt=""></div>
+          <h4 class="member-name">{{i['fullName']}}</h4>
+          <h6 class="member-role">{{i['role']}}</h6>
+          <div class="social">
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fab fa-lg fa-facebook-f"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-lg fa-instagram"></i></a>
+            <a href="#" class="whatsapp"><i class="fab fa-lg fa-whatsapp"></i></a>
+            <a href="#" class="linkedin"><i class="fab fa-lg fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-1 d-flex align-items-stretch mb-5 mb-lg-0" *ngFor="let i of row1">
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer dir="rtl"></app-footer>

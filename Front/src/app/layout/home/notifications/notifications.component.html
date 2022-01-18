@@ -1,0 +1,46 @@
+<section class="more-services section-bg">
+    <div class="container-fluid">
+
+        <section class="more-services section-bg">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="header">
+                            <h2 class="header_title">اطلاعیه کارآموزان</h2>
+                            <div class="header_divider"></div>
+                        </div>
+                        <div class="row">
+                            <div class="card col-lg-4" *ngFor="let i of newestNotification">
+                                <img [src]="i['image']" class="card-img" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="">{{i['title']}} </a></h5>
+                                    <p class="card-text">{{i['brief']}} </p>
+                                    <p class="card-date">{{i['date']}} </p>
+                                    <a href="#" [routerLink]="['/notification-detail',i['_id']]" class="btn">ادامه مطلب</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3">
+                        <div class="header">
+                            <h2 class="header_title">مناسبت ها</h2>
+                            <div class="header_divider"></div>
+                        </div>
+                        <owl-carousel-o [options]="customOptions">
+                            <ng-template carouselSlide *ngFor="let i of newestOccasion">
+                                <div class="box">
+                                    <img [src]="i['image']" class="img-fluid">
+                                    <a class="title">
+                                        <h5>{{i['title']}}</h5>
+                                    </a>
+                                    <p class="brief">{{i['brief']}} </p>
+                                    <p class="date">{{i['date']}} </p>
+                                </div>
+                            </ng-template>
+                        </owl-carousel-o>
+                    </div>
+                </div>
+            </div>
+        </section>

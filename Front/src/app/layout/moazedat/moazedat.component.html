@@ -1,0 +1,22 @@
+<app-header dir="rtl"></app-header>
+<div class="container commissions">
+    <div class="section-title mb-4">
+        <h2>معاضدت</h2>
+    </div>
+    <article class="commission" *ngFor="let i of AllMoazedat">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="img">
+                    <img [src]="i['image']" [alt]="i['imageDescription']" alt="" class="img img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-8 mt-2">
+                <div class="content">
+                    <h2 class="title">{{i['title']}}</h2>
+                    <p>{{i['details']}}</p>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+<app-footer dir="rtl"></app-footer>

@@ -1,0 +1,146 @@
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    direction: rtl;
+  }
+  .header_title{
+    margin-bottom: 0;
+    font-size: 18px;
+    font-family: IRANSans_Bold;
+  }
+  .header_title + .header_divider {
+    margin-right: 16px;
+  }
+  .header_divider {
+    flex-grow: 1;
+    height: 1px;
+    background: #ebebeb;
+  }
+
+  
+.more-services{
+    padding: 20px 0;
+    text-align: right;
+
+}
+.more-services img {
+    border-radius: 5px;
+  }
+  
+  .more-services .card {
+    border: 0;
+    text-align: ceneter;
+    // border: #ececec solid 1px;
+    // background-color: #fff;
+    // box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
+
+  }
+  
+  .more-services .card-body {
+    -moz-text-align-last: center;
+    text-align-last: center;
+  }
+  
+  .more-services .card-title a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #1473e6;
+    transition: ease-in-out 0.3s;
+  }
+  
+  .more-services .card-title a:hover {
+    color: #1473e6;
+  }
+
+  .more-services .card-img{
+    transition: 0.5s;
+
+  }
+  .more-services .card-img:hover {
+    transform: scale(1.05);
+  }
+
+
+
+  .more-services .card-body .card-text{
+    font-family: 'IRANSans_Light' !important;
+    text-align: justify;
+
+  }
+  .more-services .card-body .card-date{
+    text-align: left;
+    color: #1473e6;
+    font-family: 'IRANSans_Light' !important;
+  }
+  .more-services .btn {
+    border-radius: 5px;
+    padding: 6px 30px;
+    border: 1px solid #1473e6;
+    color: #1473e6;
+  }
+  
+  .more-services .btn:hover {
+    color: #fff;
+    background: #1473e6;
+  }
+
+ .box {
+    padding: 20px 15px;
+    // background: #fff;
+    text-align: center;
+    // box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    margin-left: 5px;
+  }
+  .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0 10px rgba(1, 41, 112, 0.1);
+    z-index: 9999999!important;
+  }
+   .box .title h5{
+    font-weight: 400;
+    font-size: 14px;
+    color: #1473e6;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .box .brief{
+    font-family: 'IRANSans_Light' !important;
+    text-align: justify;
+  }
+  .box .date{
+    font-family: 'IRANSans_Light' !important;
+    color: #1473e6;
+    text-align: left;
+  }
+
+    /*slider style*/
+    .owl-carousel .owl-item img {
+      display: block;
+      width: 100%;
+    }
+    :host::ng-deep .owl-prev,
+    :host::ng-deep .owl-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    :host::ng-deep .owl-prev {
+      left: 0;
+  
+    }
+    :host::ng-deep .owl-next {
+      right: 0;
+    }
+  
+  :host::ng-deep.owl-stage{
+    margin: 10px;
+  }
+  
+

@@ -1,0 +1,92 @@
+<p-toast [baseZIndex]="999999999" dir="rtl" position="center" class="text-right"></p-toast>
+
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-info">
+            <img width="90px" src="../../../assets/images/logo-w.png" class="img-fluid" alt="" />
+            <p class="pb-3"><em> مرکز وکلا قوه قضاییه استان لرستان</em></p>
+            <p>
+              لرستان خرم آباد بالاتر از جهاد کشاورزی<br>
+              خیابان رودکی ساختمان پارسه طبقه سوم<br><br>
+              <strong>تلفن: </strong>06633242671<br>
+              <strong>فکس: </strong>06633242672<br>
+              <strong>ایمیل: </strong> info@markazvl.ir<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fab fa-lg fa-facebook-f"></i></a>
+              <a href="#" class="instagram"><i class="fab fa-lg fa-instagram"></i></a>
+              <a href="#" class="whatsapp"><i class="fab fa-lg fa-whatsapp"></i></a>
+              <a href="#" class="linkedin"><i class="fab fa-lg fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h4>دسترسی سریع</h4>
+          <ul>
+            <li><i class="fas fa-chevron-left"></i> <a href="#">صفحه اصلی</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="#">اعضا هیات مدیره</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="#">کارکنان</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="#">سوالات متداول</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="#">گالری</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="#">اخبار</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="#">اطلاعیه کارآموزان</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="#">مقالات</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="#">درباره مرکز</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="#">ارتباط با مرکز</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h4>لینک های مفید</h4>
+          <ul>
+            <li><i class="fas fa-chevron-left"></i> <a href="https://www.23055.ir/">مرکز وکلا</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="https://adliran.ir/">عدل ایران</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="https://23055.ir/sections/judgment">دیوان داوری</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="https://23055.ir/lawyers/transfer">نقل و انتقال وکلا</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="https://www.bonyadvokala.com/">بنیاد وکلا</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="https://www.shoraha.org.ir/">شورای عالی کشور</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="https://eadl.ir/">قوه قضائیه</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="https://divanealee.eadl.ir/">دیوان عالی کشور</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="https://lawyerclub.adliran.ir/">خدمات الکترونیک قضایی</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="https://dadgostari-lr.eadl.ir/">دادگستری لرستان</a></li>
+            <li><i class="fas fa-chevron-left"></i> <a href="https://www.rrk.ir/">روزنامه رسمی کل کشور</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-newsletter">
+          <h4>عضویت در خبرنامه</h4>
+          <p style="  font-family: 'IRANSans_Light' !important;">برای اطلاع از اخبار مرکز در خبرنامه پیامکی عضو شوید</p>
+          <form (ngSubmit)="addSmsSubscription()" [formGroup]="mobileForm">
+            <input type="mobile" name="mobile" maxlength="11" minlength="11" pKeyFilter="int" formControlName="mobile"
+              pInputText placeholder="عضویت با شماره موبایل" required
+              style=" font-family: 'IRANSans_Light' !important;">
+            <button type="submit"  pButton pRipple [disabled]="mobileForm.invalid"
+              label="عضویت" ></button>
+          </form>
+          <ul class="mt-1 text-right list-inline" *ngFor="let error of mobileErrorMessages.mobile">
+            <li class="font-small text-danger font-weight-bold list-inline-item" *ngIf="mobileForm.get('mobile').hasError(error.type)
+                      && (mobileForm.get('mobile').dirty || mobileForm.get('mobile').touched)"> {{ error.message }}
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; <strong>کلیه حقوق این وب سایت متعلق به <span>مرکز وکلا قوه قضاییه استان لرستان</span> می باشد </strong>
+    </div>
+    <div class="credits">
+      طراحی و پیاده سازی توسط <a href="https://parsarad.com/">شرکت ایده پردازان پارس آراد</a>
+    </div>
+  </div>
+</footer>
